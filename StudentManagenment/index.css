@@ -1,0 +1,143 @@
+
+
+/* Change this breakpoint if you change the breakpoint of the navbar */
+
+@media (min-width: 992px) {
+.animate {
+animation-duration: 0.3s;
+-webkit-animation-duration: 0.3s;
+animation-fill-mode: both;
+-webkit-animation-fill-mode: both;
+}
+}
+
+@keyframes slideIn {
+0% {
+transform: translateY(1rem);
+opacity: 0;
+}
+100% {
+transform:translateY(0rem);
+opacity: 1;
+}
+0% {
+transform: translateY(1rem);
+opacity: 0;
+}
+}
+
+@-webkit-keyframes slideIn {
+0% {
+-webkit-transform: transform;
+-webkit-opacity: 0;
+}
+100% {
+-webkit-transform: translateY(0);
+-webkit-opacity: 1;
+}
+0% {
+-webkit-transform: translateY(1rem);
+-webkit-opacity: 0;
+}
+}
+
+.slideIn {
+-webkit-animation-name: slideIn;
+animation-name: slideIn;
+}
+
+/* Other styles for the page not related to the animated dropdown */
+
+body {
+    box-sizing: border-box;
+    background: #007bff;
+    background: linear-gradient(to right,#3498db,#8e44ad);
+}
+.login-form{
+    width: 360px;
+    background: #f1f1f1;
+    height: 500px;
+    padding: 80px 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.login-form h1{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.txtb{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 35px 0px;
+}
+.txtb input{
+    font-size: 15px;
+    color: #333;
+    border: none;
+    outline: none;
+    width:100%;
+    background: none;
+    padding: 0 5px;
+    height: 30px;
+}
+
+.txtb span::before{
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .5s;
+
+}
+.txtb span::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0px;
+    top: 31px;
+    background: linear-gradient(120deg,#3498db,#8e44ad);
+    transition: .5s;
+}
+.focus + span::before{
+    top: -5px;
+}
+.focus + span::after{
+    width: 100%;
+}
+.logbtn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 50px;
+}
+.logbtn:hover{
+    background-position: right;
+}
+select{
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #adadad;
+    position: relative;
+    background: none;
+    font-size: 15px;
+    color: #333;
+}
+option{
+    font-size: 15px;
+    color: #333;
+}
